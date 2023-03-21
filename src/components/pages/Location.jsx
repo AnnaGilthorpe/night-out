@@ -1,4 +1,4 @@
-import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
+import { CloudArrowUpIcon, LockClosedIcon, ServerIcon, HandRaisedIcon } from '@heroicons/react/20/solid'
 import { useState } from 'react'
 import PackageSelection from '../content/PackageSelection'
 
@@ -25,11 +25,11 @@ const locations = [
     icon: LockClosedIcon,
   },
   {
-    name: 'Scotland.',
+    name: 'Scotland',
     icon: ServerIcon,
   },
   {
-    name: 'Northern Ireland.',
+    name: 'Northern Ireland',
     icon: ServerIcon,
   },
   {
@@ -39,9 +39,69 @@ const locations = [
 
 ]
 
-export default function Example() {
+export default function Location() {
   const [location, setLocation] = useState("")
 const [click, setClick] = useState("")
+
+if (location === "London") {
+    let cityCode = "602"
+    let codeBook = "2589989"
+console.log(cityCode)
+console.log(codeBook)
+    }
+
+    if (location === "South") {
+      let cityCode = "603"
+      let codeBook = "2590884"
+      
+      console.log(cityCode)
+      console.log(codeBook)
+   
+   }
+    
+    if (location === "Midlands and Central") {
+        let cityCode = "604"
+        let codeBook = "2589989"
+        console.log(cityCode)
+console.log(codeBook)
+      }
+   
+        if (location === "Wales and North West") {
+            let cityCode = "605"
+            let codeBook = "2602512"
+       console.log(codeBook)
+    console.log(cityCode)
+            }
+    
+            if (location === "Scotland") {
+                let cityCode = "607"
+                let codeBook = "2597039"
+                console.log(cityCode)
+                console.log(codeBook)
+
+                }
+                if (location === "North and North East") {
+                    let cityCode = "606"
+                    let codeBook = "2603966"
+              console.log(cityCode)
+              console.log(codeBook)
+
+
+                    }
+                    if (location === "All of Ireland") {
+                        let cityCode = "608"
+                        let codeBook = "1502554"
+                  console.log(cityCode)
+              console.log(codeBook)
+                        }
+                        if (location === "Northern Ireland") {
+                            let cityCode = "609"
+                            let codeBook = "2589607"
+                            console.log(codeBook)
+                            console.log(cityCode)
+                                }
+                              
+
 if (click === "click") {
   return <> <PackageSelection location = {{location: location}}/>  </>
 }
@@ -53,7 +113,6 @@ if (click === "click") {
           <div className="lg:pr-8 lg:pt-4">
             <div className="lg:max-w-lg">
               <h2 className="text-base font-semibold leading-7 text-indigo-600">Pick Your Location</h2>
-             
               <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
                 {locations.map((locations) => (
                   <div key={locations.name} className="relative pl-9">
@@ -61,6 +120,7 @@ if (click === "click") {
                    <button
           type="button" onClick={function location(event) {
             event.preventDefault()
+            event.stopPropagation()
             setLocation(locations.name)
             setClick("click")
           }}

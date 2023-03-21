@@ -42,7 +42,7 @@ const selections = [
     // More people...
   ]
   
-  export default function Example({location}) {
+  export default function Package({location}) {
     const [selection, setSelections] = useState("")
 
     if (selection === "Bronze") { 
