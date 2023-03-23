@@ -49,7 +49,7 @@ const locations = [
     imageURL: '/assets/images/locations/Scotland.png',
   },
   {
-    name: 'Northern Ireland.',
+    name: 'Northern Ireland',
     code:  "609",
     codeBook: "2589607",
     icon: ServerIcon,
@@ -85,7 +85,7 @@ if (click === "click") {
   return ( 
   <>
       <div class="flex min-h-screen items-center justify-center bg-gray-900">
-        <div className="overflow-hidden py-24 sm:py-32">
+        <div className="columns-2 overflow-hidden py-24 sm:py-32">
          <h2 className="text-3xl font-bold tracking-tight text-amber-100 sm:text-4xl text-center">Pick Your Location</h2>
          <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="flex min-h-screen items-center justify-center bg-gray-900">
